@@ -68,8 +68,10 @@ pub struct Chain<T>
 where
     T: Chainable,
 {
-    map: HashMap<Vec<Token<T>>, HashMap<Token<T>, usize>>,
-    order: usize,
+    /// The map
+    pub map: HashMap<Vec<Token<T>>, HashMap<Token<T>, usize>>,
+    /// The order
+    pub order: usize,
 }
 
 impl<T> Default for Chain<T>
